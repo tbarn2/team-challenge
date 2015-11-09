@@ -1,4 +1,4 @@
 # team-challenge
 
 
-"My favorite candy is {{insert a candy here}}, especially {{insert more details}}"
+"My favorite candy is sour worms especially blue ones. 
