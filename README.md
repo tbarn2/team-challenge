@@ -1,2 +1,2 @@
 # team-challenge
-My favorite candy is candy corn!
+My favorite candy is kit kats!
