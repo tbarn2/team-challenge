@@ -1,2 +1,2 @@
 # team-challenge
-The team challenge thing
+My favorite candy is candy corn!
