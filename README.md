@@ -1,2 +1,2 @@
 # team-challenge
-My favorite candy is kit kats!
+My favorite candy is starburst, especially blue.
