@@ -1,1 +1,46 @@
+<<<<<<< HEAD
 index.html
+=======
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--angular-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!--css-->
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>Sign Up</h1>
+            <blockquote>Our service is fun and awesome but you must be 13 years old to join</blockquote>
+        </div>
+        <div class="container-fluid form-group" id="formGroup">
+            <form name="signUpForm" novalidate>
+                <label for="email">Email</label>
+                <input id="email" type="text" class="form-control" placeholder="email address">
+                <label for="firstName">First Name</label>
+                <input id="firstName" type="text" class="form-control" placeholder="your first name">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" type="text" class="form-control" placeholder="your last name">
+                <label for="birth">Birthdate</label>
+                <input id="birth" type="text" class="form-control" placeholder="your birthdate">
+                <label for="password">Password</label>
+                <input id="password" type="text" class="form-control" placeholder="your password">
+                <label for="confirm">Confirm Password</label>
+                <input id="confirm" type="text" class="form-control" placeholder="your password">
+                <br>
+                <div>
+                    <button class="btn btn-danger">Reset</button>
+                    <button class="btn btn-success" type="submit" ng-disabled="myForm.$invalid">Sign Me Up!</button>
+                </div>
+            </form>
+        </div>
+
+        <!--js script-->
+        <script src="js/app.js"></script>
+    </body>
+</html>
+>>>>>>> 4d3888fedd9faf13eb2aec319e347732cd39d5f5

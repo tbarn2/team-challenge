@@ -1,6 +1,7 @@
 # team-challenge
 
-HEAD
+
+
 My favorite candy is starburst, especially blue.
 
 
@@ -9,4 +10,8 @@ My favorite candy is starburst, especially blue.
 
 
 "My favorite candy is sour patch kidz especially green ones. 
+
+
+My favorite candy is freedom, especially the red, white, and blue kind.
+
 
