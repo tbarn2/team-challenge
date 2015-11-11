@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!--angular-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
         <!-- bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <!--css-->
         <link rel="stylesheet" href="css/main.css"/>
-
     </head>
     <body>
         <div class="container-fluid">
             <h1>Sign Up</h1>
             <blockquote>Our service is fun and awesome but you must be 13 years old to join</blockquote>
+        </div>
+        <div class="container-fluid form-group" id="formGroup">
+            <form>
+                <label for="email">Email</label>
+                <input id="email" type="text" class="form-control">
+                <label for="firstName">First Name</label>
+                <input id="firstName" type="text" class="form-control">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" type="text" class="form-control">
+                <label for="birth">Birthdate</label>
+                <input id="birth" type="text" class="form-control">
+                <label for="password">Password</label>
+                <input id="password" type="text" class="form-control">
+                <label for="confirm">Confirm Password</label>
+                <input id="confirm" type="text" class="form-control">
+                <br>
+                <div>
+                    <button class="btn">Reset</button>
+                    <button class="btn">Sign Me Up!</button>
+                </div>
+            </form>
         </div>
 
         <!--js script-->
