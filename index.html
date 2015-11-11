@@ -15,23 +15,23 @@
             <blockquote>Our service is fun and awesome but you must be 13 years old to join</blockquote>
         </div>
         <div class="container-fluid form-group" id="formGroup">
-            <form>
+            <form name="signUpForm" novalidate>
                 <label for="email">Email</label>
-                <input id="email" type="text" class="form-control">
+                <input id="email" type="text" class="form-control" placeholder="email address">
                 <label for="firstName">First Name</label>
-                <input id="firstName" type="text" class="form-control">
+                <input id="firstName" type="text" class="form-control" placeholder="your first name">
                 <label for="lastName">Last Name</label>
-                <input id="lastName" type="text" class="form-control">
+                <input id="lastName" type="text" class="form-control" placeholder="your last name">
                 <label for="birth">Birthdate</label>
-                <input id="birth" type="text" class="form-control">
+                <input id="birth" type="text" class="form-control" placeholder="your birthdate">
                 <label for="password">Password</label>
-                <input id="password" type="text" class="form-control">
+                <input id="password" type="text" class="form-control" placeholder="your password">
                 <label for="confirm">Confirm Password</label>
-                <input id="confirm" type="text" class="form-control">
+                <input id="confirm" type="text" class="form-control" placeholder="your password">
                 <br>
                 <div>
                     <button class="btn btn-danger">Reset</button>
-                    <button class="btn btn-success">Sign Me Up!</button>
+                    <button class="btn btn-success" type="submit" ng-disabled="myForm.$invalid">Sign Me Up!</button>
                 </div>
             </form>
         </div>

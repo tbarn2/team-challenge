@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a34264c-79da-4084-9c33-c4fbb39152e1" name="Default" comment="Set up skeleton of index.html">
+    <list default="true" id="8a34264c-79da-4084-9c33-c4fbb39152e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -80,8 +80,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73619634">
-              <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.62116563">
+              <caret line="27" column="98" selection-start-line="27" selection-start-column="98" selection-end-line="27" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -238,7 +238,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447275613386</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fiddled with buttons">
+      <created>1447275787518</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1447275787518</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -279,7 +285,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Started index.html" />
     <MESSAGE value="Set up skeleton of index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up skeleton of index.html" />
+    <MESSAGE value="Fiddled with buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fiddled with buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -406,8 +413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73619634">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.62116563">
+          <caret line="27" column="98" selection-start-line="27" selection-start-column="98" selection-end-line="27" selection-end-column="98" />
           <folding />
         </state>
       </provider>
