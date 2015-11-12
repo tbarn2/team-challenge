@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a34264c-79da-4084-9c33-c4fbb39152e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="team-challenge.iws" />
@@ -215,7 +212,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447276412568</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="half done validating">
+      <created>1447286697687</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1447286697687</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -258,7 +261,8 @@
     <MESSAGE value="Set up skeleton of index.html" />
     <MESSAGE value="Fiddled with buttons" />
     <MESSAGE value="started validating" />
-    <option name="LAST_COMMIT_MESSAGE" value="started validating" />
+    <MESSAGE value="half done validating" />
+    <option name="LAST_COMMIT_MESSAGE" value="half done validating" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
