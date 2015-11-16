@@ -11,12 +11,15 @@
         <link rel="stylesheet" href="css/main.css"/>
     </head>
     <body ng-app="SignUpApp">
-        <div class="container-fluid">
+        <div class="container-fluid header">
             <h1>Sign Up</h1>
             <blockquote>Our service is fun and awesome but you must be 13 years old to join</blockquote>
         </div>
+        <div class="container-fluid">
+            <img src="img/logo.png" class="image">
+        </div>
 
-        <div class="container-fluid" conrtoller="FormCtrl">
+        <div class="container-fluid content" conrtoller="FormCtrl">
             <form name="signUpForm" novalidate>
 
                 <div class="form-group" ng-class="{'has-error' : signUpForm.email.$invalid && !signUpForm.email.$pristine, 'has-success' : signUpForm.email.$valid}">
@@ -34,12 +37,15 @@
                 <div class="form-group" ng-class="{'has-error' : signUpForm.birth.$invalid && !signUpForm.birth.$pristine, 'has-success' : signUpForm.birth.$valid}">
                     <label for="birth">Birthdate</label>
                     <input id="birth" name="birth" type="text" class="form-control" placeholder="your birthdate" ng-model="date" required>
-                    <p ng-show="signUpForm.birth.$invalid && !signUpForm.birth.$pristine">Must be a valid date</p>
+                    <p ng-show="Date.parse(signUpForm.birth).$invalid && !Date.parse(signUpForm.birth).$pristine">Must be a valid date</p>
                 </div>
-                <label for="password">Password</label>
-                <input id="password" type="text" class="form-control" placeholder="your password" required>
-                <label for="confirm">Confirm Password</label>
-                <input id="confirm" type="text" class="form-control" placeholder="your password" required>
+                <div class="form-goup" ng-class="{'has-error' : signUpForm.pass != signUpForm.confirm && signUpForm.pass.$pristine || signUpForm.pass.$invalid, 'has-success' : signUpForm.pass.$valid && signUpForm.pass == signUpForm.confirm}">
+                    <label for="password">Password</label>
+                    <input id="password" name="pass" type="password" class="form-control" placeholder="your password" ng-model="password" required>
+                    <p ng-show="signUpForm.pass.$invalid && !signUpForm.pass.$pristine">Please enter a password</p>
+                    <label for="confirm">Confirm Password</label>
+                    <input id="confirm" name="confirm" type="password" class="form-control" placeholder="your password" ng-model="passwordConfirm" required>
+                </div>
                 <br>
                 <div>
                     <button class="btn btn-danger" ng-click="signUpForm.clear();">Reset</button>
@@ -53,4 +59,3 @@
         <script src="js/app.js"></script>
     </body>
 </html>
->>>>>>> 4d3888fedd9faf13eb2aec319e347732cd39d5f5
