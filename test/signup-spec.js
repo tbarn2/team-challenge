@@ -6,11 +6,6 @@ describe('Sign Up Form', function() {
       browser.get('http://localhost:8000/team-challenge/');
    });
 
-    // initial test
-    it('should have a title', function() {
-        expect(browser.getTitle()).toEqual('Sign Up Form');
-    });
-    
     // email tests
     it('should be invalid on a invalid email syntax', function() {
         var email = element(by.id('email'));
@@ -28,50 +23,58 @@ describe('Sign Up Form', function() {
     });
     
     // last name tests
-    it('should pass last name validation', function() {
+    it('should not pass last name input', function() {
         var input = element(by.model('lastName'));
-        input.sendKeys('Ross');
-        expect((input, 'ng-invalid')).toEqual(true);
-    });
-
-    it('should not pass last name validation', function() {
-        var input = element(by.model('lastName'));
-        input.sendKeys('Ross')
-        input.clear();
-        expect((input, 'ng-invalid').toEqual(false));
-    });
-    
-    // matching password tests
-    it('should be valid on matching passwords', function(){
-        var password = element(by.id('password'));
-        var passwordConfirm = element(by.id('passwordConfirm'));
-        password.sendKeys('password1234');
-        passwordConfirm.sendKeys('password1234')
-        expect(element(by.id('passwordConfirm')).getAttribute('class')).toMatch('ng-valid');
-    });
-    
-    it('should be invalid password when field left blank', function() {
-        expect(element(by.id('confirmPassword')).getAttribute('class')).toMatch('ng-invalid');
-    });
-    
-    // submit tests
-    it('should submit form successfully', function() {
-        var email = element(by.id('email'));
-        email.sendKeys('informatics@uw.com');
-        var firstName = element(by.id('firstName'));
-        fname.sendKeys('Joel');
-        var birth = element(by.id('birth'));
-        birth.sendKeys('03/30/1995');
-        expect(birth.getAttribute('class')).toMatch('ng-valid');
-        var name = element(by.id('lastName'));
-        name.sendKeys('Ross');
-        var password1 = element(by.id('password'));
-        var password2 = element(by.id('confirmPassword'));
-        password1.sendKeys('password');
-        password2.sendKeys('password');
-        // .... 
-        expect(element(by.id('password')).getAttribute('class')).toMatch('ng-valid');
+        input.click();
+        element(by.model('date')).click();
+        expect(element(by.id('lastNameShow')).isDisplayed()).toBe(true);
 
     });
+
+    // it('should pass last name validation', function() {
+    //     var input = element(by.model('lastName'));
+    //     input.sendKeys('Ross');
+    //     expect((input, 'ng-invalid')).toEqual(true);
+    // });
+
+    // it('should not pass last name validation', function() {
+    //     var input = element(by.model('lastName'));
+    //     input.sendKeys('Ross')
+    //     input.clear();
+    //     expect((input, 'ng-invalid').toEqual(false));
+    // });
+    
+    // // matching password tests
+    // it('should be valid on matching passwords', function(){
+    //     var password = element(by.id('password'));
+    //     var passwordConfirm = element(by.id('passwordConfirm'));
+    //     password.sendKeys('password1234');
+    //     passwordConfirm.sendKeys('password1234')
+    //     expect(element(by.id('passwordConfirm')).getAttribute('class')).toMatch('ng-valid');
+    // });
+    
+    // it('should be invalid password when field left blank', function() {
+    //     expect(element(by.id('passwordConfirm')).getAttribute('class')).toMatch('ng-invalid');
+    // });
+    
+    // // submit tests
+    // it('should submit form successfully', function() {
+    //     var email = element(by.id('email'));
+    //     email.sendKeys('informatics@uw.com');
+    //     var firstName = element(by.id('firstName'));
+    //     fname.sendKeys('Joel');
+    //     var birth = element(by.id('birth'));
+    //     birth.sendKeys('03/30/1995');
+    //     expect(birth.getAttribute('class')).toMatch('ng-valid');
+    //     var name = element(by.id('lastName'));
+    //     name.sendKeys('Ross');
+    //     var password1 = element(by.id('password'));
+    //     var password2 = element(by.id('confirmPassword'));
+    //     password1.sendKeys('password');
+    //     password2.sendKeys('password');
+    //     // .... 
+    //     expect(element(by.id('password')).getAttribute('class')).toMatch('ng-valid');
+
+    // });
 
 });

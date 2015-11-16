@@ -37,13 +37,13 @@
                 <div class="form-group" ng-class="{'has-error' : signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine, 'has-success' : signUpForm.lastName.$valid}">
                     <label for="lastName">Last Name</label>
                     <input id="lastName" type="text" name="lastName" class="form-control" placeholder="your last name" ng-model="lastName" ng-keyup="lastName()" required>
-                    <p class="help-block" ng-show="signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine">Must enter a last name</p>
+                    <p id="lastNameShow" class="help-block" ng-show="signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine || signUpForm.lastName.$touched">Must enter a last name</p>
                 </div>
                 
 <!-- Birthdate -->
                 <div class="form-group" ng-class="{'has-error' : signUpForm.birth.$invalid && !signUpForm.birth.$pristine, 'has-success' : signUpForm.birth.$valid}">
                     <label for="birth">Birthdate</label>
-                    <input id="birth" name="birth" type="text" class="form-control" placeholder="your birthdate" ng-model="date" required>
+                    <input id="birth" name="birth" type="date" class="form-control" placeholder="your birthdate" ng-model="date" required>
                     <p class="help-block" ng-show="Date.parse(signUpForm.birth).$invalid && !Date.parse(signUpForm.birth).$pristine">Must be a valid date</p>
                 </div>
                 
