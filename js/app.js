@@ -3,7 +3,23 @@
 angular.module('SignUpApp', [])
     .controller('FormCtrl', ['$scope', '$http', function($scope, $http) {
         
-        var submit = false;
+        var reset = function() {
+            $scope.email.text = '';
+            $scope.firstName = '';
+            $scope.lastName = '';
+            $scope.date = '';
+            $scope.password = '';
+            $scope.confirmPassword = '';
+            $scope.submitform.$setPristine();
+        }
+        
+        $scope.reset = reset();
+        
+        $scope.successMessage = function() {
+            reset();
+            var message = angular.element('<div class="alert alert-success"><strong>Success!</strong> Indicates a successful or positive action.</div>');
+        }
+        
         
         $scope.submitForm = function(form){
             if(form.$valid) {
@@ -42,5 +58,9 @@ angular.module('SignUpApp', [])
             } else {
                 $scope.signUpForm.passwordConfrim.$setValidity('passwordConfrim', false); 
             }
+        }
+        
+        $scope.birthdate = function() {
+            
         }
     }]);
