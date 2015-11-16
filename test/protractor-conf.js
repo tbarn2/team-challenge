@@ -1,22 +1,5 @@
-describe('email', function () {
-	beforeEach(function() {
-		browser.get('http://localhost:8000');
-	})
-
-	it ('should check if email is valid', function() {		
-		browser.getEmail();
-
-		expect(getEmail).toEqual(email);
-		// If(getEmail == email)
-		// {
-		// 	test passes
-		// }
-		// Else
-		// {
-		// 	test fails
-		// }
-
-	});
-
-});
-
+// conf.js
+exports.config = {
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  specs: ['signup-spec.js']
+}

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <!--css-->
         <link rel="stylesheet" href="css/main.css"/>
+        <title>Sign Up Form</title>
     </head>
     <body ng-app="SignUpApp">
         <div class="container-fluid">
@@ -18,26 +19,37 @@
 
         <div class="container-fluid" conrtoller="FormCtrl">
             <form name="signUpForm" novalidate>
-
+                
+<!-- Email Input -->
                 <div class="form-group" ng-class="{'has-error' : signUpForm.email.$invalid && !signUpForm.email.$pristine, 'has-success' : signUpForm.email.$valid}">
                     <label for="email">Email</label>
                     <input id="email" type="email" name="email" class="form-control" placeholder="email address" ng-model="email" required>
                     <p ng-show="signUpForm.email.$invalid && signUpForm.email.$touched" class="help-block">Must enter <strong ng-show="signUpForm.email.$invalid && signUpForm.email.$dirty">valid</strong> email</p>
                 </div>
+
+<!-- First Name Input -->
                 <label for="firstName">First Name</label>
                 <input id="firstName" type="text" class="form-control" placeholder="your first name">
+                
+<!-- Last Name Input -->
                 <div class="form-group" ng-class="{'has-error' : signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine, 'has-success' : signUpForm.lastName.$valid}">
                     <label for="lastName">Last Name</label>
                     <input id="lastName" type="text" name="lastName" class="form-control" placeholder="your last name" ng-model="name" required>
-                    <p ng-show="signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine">Must enter a last name</p>
+                    <p id="lastNameShow"ng-show="signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine">Must enter a last name</p>
                 </div>
+
+<!-- Birthdate Input -->
                 <div class="form-group" ng-class="{'has-error' : signUpForm.birth.$invalid && !signUpForm.birth.$pristine, 'has-success' : signUpForm.birth.$valid}">
                     <label for="birth">Birthdate</label>
                     <input id="birth" name="birth" type="text" class="form-control" placeholder="your birthdate" ng-model="date" required>
                     <p ng-show="signUpForm.birth.$invalid && !signUpForm.birth.$pristine">Must be a valid date</p>
                 </div>
+
+<!-- Password Input -->
                 <label for="password">Password</label>
                 <input id="password" type="text" class="form-control" placeholder="your password" required>
+
+<!-- Confirm Password Input -->
                 <label for="confirm">Confirm Password</label>
                 <input id="confirm" type="text" class="form-control" placeholder="your password" required>
                 <br>
