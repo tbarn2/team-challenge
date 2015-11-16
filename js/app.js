@@ -53,10 +53,10 @@ angular.module('SignUpApp', [])
         }
         
         $scope.password = function() { 
-            if($scope.password === $scope.passwordConfirm){
-                $scope.signUpForm.passwordConfirm.$setValidity('passwordConfirm', true); 
+            if($scope.password === $scope.confirmPassword){
+                $scope.signUpForm.confirmPassword.$setValidity('confirmPassword', true); 
             } else {
-                $scope.signUpForm.passwordConfrim.$setValidity('passwordConfrim', false); 
+                $scope.signUpForm.confirmPassword.$setValidity('confirmPassword', false); 
             }
         }
         

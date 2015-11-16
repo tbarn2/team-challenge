@@ -23,6 +23,7 @@ describe('Sign Up Form', function() {
     });
     
     // last name tests
+
     it('should not pass last name input', function() {
         var input = element(by.model('lastName'));
         input.click();
@@ -44,14 +45,15 @@ describe('Sign Up Form', function() {
     //     expect((input, 'ng-invalid').toEqual(false));
     // });
     
-    // // matching password tests
-    // it('should be valid on matching passwords', function(){
-    //     var password = element(by.id('password'));
-    //     var passwordConfirm = element(by.id('passwordConfirm'));
-    //     password.sendKeys('password1234');
-    //     passwordConfirm.sendKeys('password1234')
-    //     expect(element(by.id('passwordConfirm')).getAttribute('class')).toMatch('ng-valid');
-    // });
+    // matching password tests
+    it('should be valid on matching passwords', function(){
+        var password = element(by.id('password'));
+        var passwordConfirm = element(by.id('confirmPassword'));
+        password.sendKeys('password1234');
+        passwordConfirm.sendKeys('password1234')
+        expect(element(by.id('confirmPassword')).getAttribute('class')).toMatch('ng-valid');
+    });
+
     
     // it('should be invalid password when field left blank', function() {
     //     expect(element(by.id('passwordConfirm')).getAttribute('class')).toMatch('ng-invalid');
