@@ -5,11 +5,6 @@ describe('Sign Up Form', function() {
       //reload the page before each test
       browser.get('http://localhost:8000/team-challenge/');
    });
-
-    // initial test
-    it('should have a title', function() {
-        expect(browser.getTitle()).toEqual('Sign Up Form');
-    });
     
     // email tests
     it('should be invalid on a invalid email syntax', function() {
@@ -28,11 +23,11 @@ describe('Sign Up Form', function() {
     });
     
     // last name tests
-    it('should pass last name validation', function() {
-        var input = element(by.model('lastName'));
-        input.sendKeys('Ross');
-        expect((input, 'ng-invalid')).toEqual(true);
-    });
+    // it('should pass last name validation', function() {
+    //     var input = element(by.model('lastName'));
+    //     input.sendKeys('Ross');
+    //     expect((input, 'ng-invalid')).toEqual(true);
+    // });
 
     it('should not pass last name validation', function() {
         var input = element(by.model('lastName'));
@@ -44,10 +39,10 @@ describe('Sign Up Form', function() {
     // matching password tests
     it('should be valid on matching passwords', function(){
         var password = element(by.id('password'));
-        var passwordConfirm = element(by.id('passwordConfirm'));
+        var passwordConfirm = element(by.id('confirmPassword'));
         password.sendKeys('password1234');
         passwordConfirm.sendKeys('password1234')
-        expect(element(by.id('passwordConfirm')).getAttribute('class')).toMatch('ng-valid');
+        expect(element(by.id('confirmPassword')).getAttribute('class')).toMatch('ng-valid');
     });
     
     it('should be invalid password when field left blank', function() {

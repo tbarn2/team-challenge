@@ -37,7 +37,7 @@
                 <div class="form-group" ng-class="{'has-error' : signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine, 'has-success' : signUpForm.lastName.$valid}">
                     <label for="lastName">Last Name</label>
                     <input id="lastName" type="text" name="lastName" class="form-control" placeholder="your last name" ng-model="lastName" ng-keyup="lastName()" required>
-                    <p class="help-block" ng-show="signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine">Must enter a last name</p>
+                    <p class="help-block" ng-show="signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine || signUpForm.lastName.$touched">Must enter a last name</p>
                 </div>
                 
 <!-- Birthdate -->
@@ -54,7 +54,7 @@
                     <p class="help-block" ng-show="signUpForm.password.$invalid && !signUpForm.password.$pristine">Please enter a password</p>
 <!-- Password Confrim -->
                     <label for="confirm">Confirm Password</label>
-                    <input id="passwordConfirm" name="passwordConfirm" type="password" class="form-control" placeholder="your password" ng-model="passwordConfirm" ng-keyup="password()" required>
+                    <input id="confirmPassword" name="confirmPassword" type="password" class="form-control" placeholder="your password" ng-model="confirmPassword" ng-keyup="password()" required>
                     <p class="help-block" ng-show="signUpForm.confirmPassword.$invalid && !signUpForm.confirmPassword.$pristine">Please confirm password</p>              
                 </div>
                 <br>
