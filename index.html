@@ -10,7 +10,7 @@
         <!--css-->
         <link rel="stylesheet" href="css/main.css"/>
     </head>
-    <body ng-app="SignUpApp">
+    <body ng-app="SignUpApp" class="container">
         <div class="container-fluid header">
             <h1>Sign Up</h1>
             <blockquote>Our service is fun and awesome but you must be 13 years old to join</blockquote>
@@ -19,7 +19,7 @@
             <img src="img/logo.png" class="image">
         </div>
 
-        <div class="container-fluid content" conrtoller="FormCtrl">
+        <div class="container-fluid content" ng-controller="FormCtrl">
             <form name="signUpForm" novalidate>
 <!-- Email -->
                 <div class="form-group" ng-class="{'has-error' : signUpForm.email.$invalid && !signUpForm.email.$pristine, 'has-success' : signUpForm.email.$valid}">
@@ -63,12 +63,12 @@
                     <p class="help-block" ng-show="signUpForm.confirmPassword.$touched && signUpForm.confirmPassword.$pristine">Password confirmation required</p>      
                     <p id="match" ng-show="signUpForm.confirmPassword.$invalid && signUp.confrimPassword.$pristine" class="help-block">Passwords don't match!</p>
                 </div>
-
                 <br>
-
                 <div>
-                    <button class="btn btn-danger" ng-click="reset()">Reset</button>
-                    <button class="btn btn-success" id="submitButton" type="submit" ng-model="submit" ng-disabled="signUpForm.$invalid || signUpForm.$pristine" ng-click="successForm()">Sign Me Up!</button>
+                        <button class="btn btn-success" id="submitButton" type="submit" ng-model="submit" ng-disabled="signUpForm.$invalid || signUpForm.$pristine" ng-click="submitForm(signUpForm)">Sign Me Up!</button>
+                        
+                        <!-- <div class="alert alert-success"> <strong> SUCCESS!</strong>  -->
+                    </div>
                 </div>
             </form>
         </div>
