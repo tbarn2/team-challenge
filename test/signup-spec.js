@@ -12,7 +12,6 @@ describe('Sign Up Form', function() {
         email.sendKeys('informatics');
         expect(email.getAttribute('class')).toMatch('ng-invalid');
         expect(element(by.name('signUpForm')).getAttribute('class')).toMatch('ng-invalid');
-        expect(element(by.model('submit')).getAttribute('disabled')).toBe('true');
     });
     
     it('should be valid on a valid email', function(){
@@ -45,6 +44,24 @@ describe('Sign Up Form', function() {
         password.sendKeys('password1234');
         passwordConfirm.sendKeys('password1234')
         expect(element(by.id('confirmPassword')).getAttribute('class')).toMatch('ng-valid');
+    });
+
+    it('should be invalid on passwords that do not match', function(){
+        var password = element(by.id('password'));
+        var confirmPassword = element(by.id('confirmPassword'));
+        password.sendKeys('password');
+        confirmPassword.sendKeys('password1234');
+        expect(element(by.id('confirmPassword')).isDisplayed()).toBe(true);
+    });
+
+    it('should be invalid on passwords that do not match', function(){
+        var password = element(by.id('password'));
+        var confirmPassword = element(by.id('confirmPassword'));
+        password.click();
+        element(by.model('date')).click();
+        confirmPassword.click();
+        element(by.model('date')).click();
+        expect(element(by.id('confirmPassword')).isDisplayed()).toBe(true);
     });
 
     
