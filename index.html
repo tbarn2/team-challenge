@@ -37,7 +37,8 @@
                 <div class="form-group" ng-class="{'has-error' : signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine, 'has-success' : signUpForm.lastName.$valid}">
                     <label for="lastName">Last Name</label>
                     <input id="lastName" type="text" name="lastName" class="form-control" placeholder="your last name" ng-model="lastName" ng-keyup="lastName()" required>
-                    <p id="lastNameShow" class="help-block" ng-show="signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine || signUpForm.lastName.$touched">Must enter a last name</p>
+                    <p class="help-block" ng-show="signUpForm.lastName.$invalid && signUpForm.lastName.$touched && signUpForm.lastName.$pristine">Must enter a last name</p> 
+                    <p class="help-block" ng-show="signUpForm.lastName.$invalid && !signUpForm.lastName.$pristine">Last name required</p> 
                 </div>
                 
 <!-- Birthdate -->
@@ -48,14 +49,16 @@
                 </div>
                 
 <!-- Password -->
-                <div class="form-goup" ng-class="{'has-error' : signUpForm.pass != signUpForm.confirm && signUpForm.pass.$pristine || signUpForm.pass.$invalid, 'has-success' : signUpForm.pass.$valid && signUpForm.pass == signUpForm.confirm}">
+                <div class="form-group" ng-class="{'has-error' : signUpForm.password.$invalid && !signUpForm.password.$pristine, 'has-success' : signUpForm.password.$valid}">
                     <label for="password">Password</label>
                     <input id="password" name="password" type="password" class="form-control" placeholder="your password" ng-model="password" required>
-                    <p class="help-block" ng-show="signUpForm.password.$invalid && !signUpForm.password.$pristine">Please enter a password</p>
+                    <p class="help-block" ng-show="signUpForm.password.$invalid && !signUpForm.password.$pristine">Password required</p>
+                </div>
 <!-- Password Confrim -->
+                <div class="form-group" ng-class="{'has-error' : signUpForm.confirmPassword.$invalid && !signUpForm.confirmPassword.$pristine, 'has-success' : signUpForm.confirmPassword.$valid}">
                     <label for="confirm">Confirm Password</label>
                     <input id="confirmPassword" name="confirmPassword" type="password" class="form-control" placeholder="your password" ng-model="confirmPassword" ng-keyup="password()" required>
-                    <p class="help-block" ng-show="signUpForm.confirmPassword.$invalid && !signUpForm.confirmPassword.$pristine">Please confirm password</p>              
+                    <p class="help-block" ng-show="signUpForm.confirmPassword.$invalid && !signUpForm.confirmPassword.$pristine">Password confirmation required</p>              
                 </div>
                 <br>
                 <div>

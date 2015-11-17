@@ -6,7 +6,7 @@ describe('Sign Up Form', function() {
       browser.get('http://localhost:8000/team-challenge/');
    });
 
-    // email tests
+// email tests
     it('should be invalid on a invalid email syntax', function() {
         var email = element(by.id('email'));
         email.sendKeys('informatics');
@@ -22,30 +22,23 @@ describe('Sign Up Form', function() {
         expect(element(by.name('signUpForm')).getAttribute('class')).toMatch('ng-valid');
     });
     
-    // last name tests
-
+// last name tests
     it('should not pass last name input', function() {
         var input = element(by.model('lastName'));
         input.click();
         element(by.model('date')).click();
-        expect(element(by.id('lastNameShow')).isDisplayed()).toBe(true);
+        expect(element(by.id('lastName')).isDisplayed()).toBe(true);
 
     });
 
-    // it('should pass last name validation', function() {
-    //     var input = element(by.model('lastName'));
-    //     input.sendKeys('Ross');
-    //     expect((input, 'ng-invalid')).toEqual(true);
-    // });
+    it('should pass last name validation', function() {
+        var input = element(by.model('lastName'));
+        input.sendKeys('Ross');
+        expect(input.getAttribute('class')).toMatch('ng-valid');
+        expect(element(by.name('signUpForm')).getAttribute('class')).toMatch('ng-valid');
+    });
 
-    // it('should not pass last name validation', function() {
-    //     var input = element(by.model('lastName'));
-    //     input.sendKeys('Ross')
-    //     input.clear();
-    //     expect((input, 'ng-invalid').toEqual(false));
-    // });
-    
-    // matching password tests
+// matching password tests
     it('should be valid on matching passwords', function(){
         var password = element(by.id('password'));
         var passwordConfirm = element(by.id('confirmPassword'));
