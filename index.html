@@ -43,8 +43,8 @@
 <!-- Birthdate -->
                 <div class="form-group" ng-class="{'has-error' : signUpForm.birth.$invalid && !signUpForm.birth.$pristine, 'has-success' : signUpForm.birth.$valid}">
                     <label for="birth">Birthdate</label>
-                    <input id="birth" name="birth" type="date" class="form-control" placeholder="your birthdate" ng-model="date" required>
-                    <p class="help-block" ng-show="Date.parse(signUpForm.birth).$invalid && !Date.parse(signUpForm.birth).$pristine">Must be a valid date</p>
+                    <input id="birth" name="birth" type="text" class="form-control" placeholder="your birthdate" ng-model="date" required>
+                    <p class="help-block" ng-show="Date.parse(signUpForm.birth).$invalid || !Date.parse(signUpForm.birth).$pristine">Must be a valid date</p>
                 </div>
                 
 <!-- Password -->
@@ -60,7 +60,7 @@
                 <br>
                 <div>
                     <button class="btn btn-danger" ng-click="reset()">Reset</button>
-                    <button class="btn btn-success" type="submit" ng-model="submit" ng-disabled="signUpForm.$invalid || signUpForm.$pristine" ng-click="successMessage()">Sign Me Up!</button>
+                    <button class="btn btn-success" id="submitButton" type="submit" ng-model="submit" ng-disabled="signUpForm.$invalid || signUpForm.$pristine" ng-click="successMessage()">Sign Me Up!</button>
                 </div>
             </form>
         </div>

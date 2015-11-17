@@ -25,7 +25,7 @@ describe('Sign Up Form', function() {
     // last name tests
 
     it('should not pass last name input', function() {
-        var input = element(by.model('lastName'));
+        var input = element(by.id('lastName'));
         input.click();
         element(by.model('date')).click();
         expect(element(by.id('lastNameShow')).isDisplayed()).toBe(true);
@@ -78,5 +78,26 @@ describe('Sign Up Form', function() {
     //     expect(element(by.id('password')).getAttribute('class')).toMatch('ng-valid');
 
     // });
+
+	// tests if Sign-Up is available if all fields are filled in
+	it('should sign-up after input', function() {
+		var email = element(by.id('email'));
+		var firstName = element(by.id('firstName'));
+		var lastName = element(by.id('lastName'));
+		var birthDate = element(by.id('birth'));
+		var passWord = element(by.id('password'));
+		var passConfirm = element(by.id('confirmPassword'));
+		var button = element(by.id('submitButton'));
+
+		email.sendKeys('fakeemail@gmail.com');
+		firstName.sendKeys('John');
+		lastName.sendKeys('Cena');
+		birthDate.sendKeys('July 15, 1970');
+		passWord.sendKeys('12345');
+		passConfirm.sendKeys('12345');
+
+		expect(button.isEnabled()).toEqual(true);
+
+	})
 
 });
