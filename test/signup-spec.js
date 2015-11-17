@@ -1,5 +1,5 @@
 
-// protractor team-challenge/test/protractor-conf.js
+/// protractor team-challenge/test/protractor-conf.js
 describe('Sign Up Form', function() {
     beforeEach(function() {
       //reload the page before each test
