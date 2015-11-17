@@ -53,14 +53,19 @@ angular.module('SignUpApp', [])
         }
         
         $scope.password = function() { 
-            if($scope.password === $scope.passwordConfirm){
+            if($scope.password == $scope.passwordConfirm){
                 $scope.signUpForm.passwordConfirm.$setValidity('passwordConfirm', true); 
             } else {
-                $scope.signUpForm.passwordConfrim.$setValidity('passwordConfrim', false); 
+                $scope.signUpForm.passwordConfirm.$setValidity('passwordConfirm', false);
             }
         }
         
-        $scope.birthdate = function() {
+        $scope.birth = function() {
+            if(/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/.test(Date.parse($scope.birth()))) {
+                $scope.signUpForm.birth.$setValidity('birthdate', true);
+            } else {
+                $scope.signUpForm.birth.$setValidity('birthdate', false);
+            }
             
         }
     }]);
