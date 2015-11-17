@@ -64,30 +64,6 @@ describe('Sign Up Form', function() {
         expect(element(by.id('confirmPassword')).isDisplayed()).toBe(true);
     });
 
-    
-    // it('should be invalid password when field left blank', function() {
-    //     expect(element(by.id('passwordConfirm')).getAttribute('class')).toMatch('ng-invalid');
-    // });
-    
-    // // submit tests
-    // it('should submit form successfully', function() {
-    //     var email = element(by.id('email'));
-    //     email.sendKeys('informatics@uw.com');
-    //     var firstName = element(by.id('firstName'));
-    //     fname.sendKeys('Joel');
-    //     var birth = element(by.id('birth'));
-    //     birth.sendKeys('03/30/1995');
-    //     expect(birth.getAttribute('class')).toMatch('ng-valid');
-    //     var name = element(by.id('lastName'));
-    //     name.sendKeys('Ross');
-    //     var password1 = element(by.id('password'));
-    //     var password2 = element(by.id('confirmPassword'));
-    //     password1.sendKeys('password');
-    //     password2.sendKeys('password');
-    //     // .... 
-    //     expect(element(by.id('password')).getAttribute('class')).toMatch('ng-valid');
-
-    // });
 
 	// tests if Sign-Up is available if all fields are filled in
 	it('should sign-up after input', function() {
@@ -105,9 +81,8 @@ describe('Sign Up Form', function() {
 		birthDate.sendKeys('July 15, 1970');
 		passWord.sendKeys('12345');
 		passConfirm.sendKeys('12345');
-
-		expect(button.isEnabled()).toEqual(true);
-
+		button.click();
+		expect(browser.switchTo().alert());
 	})
 
 });

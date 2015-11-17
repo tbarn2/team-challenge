@@ -3,19 +3,19 @@
 angular.module('SignUpApp', [])
     .controller('FormCtrl', ['$scope', '$http', function($scope, $http) {
         
-        // var reset = function() {
-        //     $scope.email = '';
-        //     $scope.firstName = '';
-        //     $scope.lastName = '';
-        //     $scope.date = '';
-        //     $scope.password = '';
-        //     $scope.confirmPassword = '';
-        // }
+        var reset = function() {
+            $scope.email = '';
+            $scope.firstName = '';
+            $scope.lastName = '';
+            $scope.date = '';
+            $scope.password = '';
+            $scope.confirmPassword = '';
+        }
         
         $scope.reset = reset();
         
         $scope.successMessage = function() {
-//            reset();
+            reset();
             var message = angular.element('<div class="alert alert-success"><strong>Success!</strong> Indicates a successful or positive action.</div>');
         }
         
